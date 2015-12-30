@@ -32,6 +32,7 @@
     UIImage * effectiveImage = [self imageFillBlackColorAndTransparent: progressImage red: red green: green blue: blue];  
     return effectiveImage;
 }
+
 void ProviderReleaseData(void * info, const void * data, size_t size) {
 
     free((void *)data);
@@ -69,7 +70,7 @@ void ProviderReleaseData(void * info, const void * data, size_t size) {
 
     return resultImage;
 }
-
+/**  颜色填充  */
 + (void)fillWhiteToTransparentOnPixel: (uint32_t *)rgbImageBuf pixelNum: (int)pixelNum red: (NSUInteger)red green: (NSUInteger)green blue: (NSUInteger)blue {
 
     uint32_t * pCurPtr = rgbImageBuf;

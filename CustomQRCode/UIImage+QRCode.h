@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (QRCode)
-+ (UIImage*)imageOfQRCodeFromUrl:(NSString*)netWorkAddress codeSize:(CGFloat)codeSize;
-+ (UIImage *)imageOfQRCodeFromUrl:(NSString *)netWorkAddress codeSize:(CGFloat)codeSize red:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue;
++ (UIImage *)imageOfQRCodeFromUrl:(NSString *)netWorkAddress
+                         codeSize:(CGFloat)codeSize;
++ (UIImage *)imageOfQRCodeFromUrl:(NSString *)netWorkAddress
+                         codeSize:(CGFloat)codeSize
+                              red:(NSUInteger)red
+                            green:(NSUInteger)green
+                             blue:(NSUInteger)blue;
 @end

@@ -13,6 +13,7 @@
 		57F823AA1C3371E20030B7E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F823A81C3371E20030B7E9 /* LaunchScreen.storyboard */; };
 		57F823B31C3371F20030B7E9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F823B21C3371F20030B7E9 /* MainViewController.m */; };
 		57F823B61C3373290030B7E9 /* UIImage+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F823B51C3373290030B7E9 /* UIImage+QRCode.m */; };
+		57F823B91C3381A00030B7E9 /* UIImage+RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F823B81C3381A00030B7E9 /* UIImage+RoundRect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		57F823B21C3371F20030B7E9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		57F823B41C3373290030B7E9 /* UIImage+QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QRCode.h"; sourceTree = "<group>"; };
 		57F823B51C3373290030B7E9 /* UIImage+QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QRCode.m"; sourceTree = "<group>"; };
+		57F823B71C3381A00030B7E9 /* UIImage+RoundRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundRect.h"; sourceTree = "<group>"; };
+		57F823B81C3381A00030B7E9 /* UIImage+RoundRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundRect.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				57F823A01C3371E20030B7E9 /* Supporting Files */,
 				57F823B11C3371F20030B7E9 /* MainViewController.h */,
 				57F823B21C3371F20030B7E9 /* MainViewController.m */,
+				57F823B71C3381A00030B7E9 /* UIImage+RoundRect.h */,
+				57F823B81C3381A00030B7E9 /* UIImage+RoundRect.m */,
 				57F823B41C3373290030B7E9 /* UIImage+QRCode.h */,
 				57F823B51C3373290030B7E9 /* UIImage+QRCode.m */,
 			);
@@ -153,6 +158,7 @@
 				57F823A51C3371E20030B7E9 /* AppDelegate.m in Sources */,
 				57F823B61C3373290030B7E9 /* UIImage+QRCode.m in Sources */,
 				57F823B31C3371F20030B7E9 /* MainViewController.m in Sources */,
+				57F823B91C3381A00030B7E9 /* UIImage+RoundRect.m in Sources */,
 				57F823A21C3371E20030B7E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

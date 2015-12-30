@@ -20,7 +20,8 @@
     UIImageView * QRCodeImageView = [[UIImageView alloc]init];
     QRCodeImageView.frame = CGRectMake(120, 150, 200,200);
     [self.view addSubview:QRCodeImageView];
-    QRCodeImageView.image = [UIImage imageOfQRCodeFromUrl:@"https:www.baidu.com/chengxun" codeSize:200];
+//    QRCodeImageView.image = [UIImage imageOfQRCodeFromUrl:@"https:www.baidu.com/chengxun" codeSize:200];
+    QRCodeImageView.image = [UIImage imageOfQRCodeFromUrl:@"https:www.baidu.com/chengxun" codeSize:200 red:200 green:10 blue:10];
 
     // Do any additional setup after loading the view.
 }

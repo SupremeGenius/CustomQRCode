@@ -16,4 +16,7 @@
                               red:(NSUInteger)red
                             green:(NSUInteger)green
                              blue:(NSUInteger)blue;
++ (UIImage *)imageInsertedImage:(UIImage *)originImage
+                    insertImage:(UIImage *)insertImage
+                         radius:(CGFloat)radius;
 @end

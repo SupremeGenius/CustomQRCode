@@ -27,6 +27,7 @@
                                   red:200
                                 green:10
                                  blue:10];
+    QRCodeImageView.image = [UIImage imageInsertedImage:QRCodeImageView.image insertImage:[UIImage imageNamed:@"ico_smallBand"] radius:24];
 }
 
 - (void)didReceiveMemoryWarning {

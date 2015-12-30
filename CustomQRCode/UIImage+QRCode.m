@@ -7,7 +7,7 @@
 //
 
 #import "UIImage+QRCode.h"
-
+#import "UIImage+RoundRect.h"
 @implementation UIImage (QRCode)
 + (UIImage*)imageOfQRCodeFromUrl:(NSString *)netWorkAddress codeSize:(CGFloat)codeSize{
     if(!netWorkAddress || (NSNull * )netWorkAddress == [NSNull null]){
@@ -143,6 +143,32 @@ void ProviderReleaseData(void * info, const void * data, size_t size) {
     CGColorSpaceRelease(colorSpace);
 
     return [UIImage imageWithCGImage: scaledImage];
+}
++ (UIImage *)imageInsertedImage: (UIImage *)originImage insertImage: (UIImage *)insertImage radius: (CGFloat)radius
+{
+    if (!insertImage) { return originImage; }
+    insertImage = [UIImage imageOfRoundRectWithImage: insertImage size: insertImage.size radius: radius];
+    UIImage * whiteBG = [UIImage imageNamed:@"ico_smallBand"];
+    whiteBG = [UIImage imageOfRoundRectWithImage: whiteBG size: whiteBG.size radius: radius];
+
+    //白色边缘宽度
+    const CGFloat whiteSize = 2.f;
+    CGSize brinkSize = CGSizeMake(originImage.size.width / 4, originImage.size.height / 4);
+    CGFloat brinkX = (originImage.size.width - brinkSize.width) * 0.5;
+    CGFloat brinkY = (originImage.size.height - brinkSize.height) * 0.5;
+
+    CGSize imageSize = CGSizeMake(brinkSize.width - 2 * whiteSize, brinkSize.height - 2 * whiteSize);
+    CGFloat imageX = brinkX + whiteSize;
+    CGFloat imageY = brinkY + whiteSize;
+
+    UIGraphicsBeginImageContext(originImage.size);
+    [originImage drawInRect: (CGRect){ 0, 0, (originImage.size) }];
+    [whiteBG drawInRect: (CGRect){ brinkX, brinkY, (brinkSize) }];
+    [insertImage drawInRect: (CGRect){ imageX, imageY, (imageSize) }];
+    UIImage * resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return resultImage;
 }
 
 @end
